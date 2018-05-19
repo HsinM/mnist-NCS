@@ -1,7 +1,16 @@
 from mvnc import mvncapi as mvnc
+import mnist    # pip3 install mnist
 import numpy
 
-(x_train, y_train), (x_test, y_test) = mnist.load_data()
+# For tensorflow
+# (x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+x_train = mnist.train_images()
+y_train = mnist.train_labels()
+
+x_test = mnist.test_images()
+y_test = mnist.test_labels()
+
 
 # Prepare test image
 test_idx = numpy.random.randint(0, 10000)
