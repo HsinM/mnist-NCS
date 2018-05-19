@@ -52,7 +52,7 @@ Do prediction on a random image using NCS
 $ python predict-mnist-ncs.py
 ```
 
-
+---
 
 model.json
 
