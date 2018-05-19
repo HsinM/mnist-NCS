@@ -57,7 +57,8 @@ $ python predict-mnist-ncs.py
 model.json
 
 ```
-Only contain model graph (TF 1.8.0 format)
+Only contain model graph
+
 ```
 
 weights.h5
@@ -69,7 +70,8 @@ Only contain model weights
 model.h5
 
 ```
-Both contain model graph  (TF 1.8.0 format) and weights
+Both contain model graph
+
 ```
 
 
