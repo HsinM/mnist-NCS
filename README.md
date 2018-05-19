@@ -5,7 +5,7 @@
 Train a simple CNN for MNIST using script
 
 ```
-$ python train-mnist.py
+$ python3 train-mnist.py
 ```
 
 Train a simple CNN for MNIST using jupyter
@@ -17,7 +17,7 @@ train-mnist.ipynb
 Convert Keras model to Tensorflow model using script (model.json and weights.h5 file)
 
 ```
-$ python convert-mnist.py
+$ python3 convert-mnist.py
 ```
 
 Convert Keras model to Tensorflow model using jupyter
@@ -29,7 +29,7 @@ convert-mnist.ipynb
 Convert Keras model to Tensorflow model using script (model.h5 file)
 
 ```
-$ python convert-mnist-only-h5.py
+$ python3 convert-mnist-only-h5.py
 ```
 
 Convert Keras model to Tensorflow model using jupyter
@@ -61,7 +61,7 @@ desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data})
 Do prediction on a random image using NCS
 
 ```
-$ python predict-mnist-ncs.py
+$ python3 predict-mnist-ncs.py
 ```
 
 ---
