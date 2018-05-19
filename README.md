@@ -58,7 +58,6 @@ model.json
 
 ```
 Only contain model graph
-
 ```
 
 weights.h5
@@ -71,7 +70,6 @@ model.h5
 
 ```
 Both contain model graph
-
 ```
 
 
