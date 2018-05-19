@@ -41,9 +41,7 @@ convert-mnist-only-h5.ipynb
 Compile MNIST model using mvNC Toolkit
 
 ```
-$ mvNCCheck TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 $ mvNCCompile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
-$ mvNCProfile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 ```
 
 Check, Profile  model using mvNC Toolkit
