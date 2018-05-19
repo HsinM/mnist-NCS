@@ -1,6 +1,6 @@
 # Intel® Movidius™ NCS MNIST example
 
-## Practice NCS using MINST dataset with Keras
+## Practice NCS using MNIST dataset with Keras
 
 Train a simple CNN for MNIST using script
 
@@ -11,7 +11,7 @@ $ python train-mnist.py
 Train a simple CNN for MNIST using jupyter
 
 ```
-train-minst.ipynb
+train-mnist.ipynb
 ```
 
 Convert Keras model to Tensorflow model using script (model.json and weights.h5 file)
@@ -23,7 +23,7 @@ $ python convert-mnist.py
 Convert Keras model to Tensorflow model using jupyter
 
 ```
-convert-minst.ipynb
+convert-mnist.ipynb
 ```
 
 Convert Keras model to Tensorflow model using script (model.h5 file)
@@ -35,7 +35,7 @@ $ python convert-mnist-only-h5.py
 Convert Keras model to Tensorflow model using jupyter
 
 ```
-convert-minst-only-h5.ipynb
+convert-mnist-only-h5.ipynb
 ```
 
 Check, Compile, Profile MNIST model using mvNC Toolkits
