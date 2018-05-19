@@ -34,6 +34,6 @@ saver.save(sess, "./TF_Model/tf_model")
 
 
 # For Tensorboard
-#fw = tf.summary.FileWriter('logs', sess.graph)
-#fw.close()
+fw = tf.summary.FileWriter('logs', sess.graph)
+fw.close()
 
