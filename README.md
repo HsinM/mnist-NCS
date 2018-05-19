@@ -46,7 +46,7 @@ $ mvNCCompile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 $ mvNCProfile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 ```
 
-If `*tensorflow.python.framework.errors_impl.InvalidArgumentError*`*: You must feed a value for placeholder tensor 'conv2d_1_input' with dtype float and shape [?,28,28,1]* occur on execute command above, please edit ncsdk source in `/usr/local/bin/ncsdk/Controllers/TensorFlowParser.py` line 1059, add a feed_dict to eval:
+If `tensorflow.python.framework.errors_impl.InvalidArgumentError`*: You must feed a value for placeholder tensor 'conv2d_1_input' with dtype float and shape [?,28,28,1]* occur on execute command above, please edit ncsdk source in `/usr/local/bin/ncsdk/Controllers/TensorFlowParser.py` line 1059, add a feed_dict to eval:
 
 ```
 # desired_shape = node.inputs[1].eval() 
