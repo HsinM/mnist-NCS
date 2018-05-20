@@ -68,23 +68,11 @@ $ python3 predict-mnist-ncs.py
 
 ---
 
-model.json
+model.json `Only contain model graph (Keras Format)`.
 
-```
-Only contain model graph
-```
+weights.h5 `Only contain model weights (Keras Format)`.
 
-weights.h5
-
-```
-Only contain model weights
-```
-
-model.h5
-
-```
-Both contain model graph
-```
+model.h5 `Both contain model graph and weights`.
 
 
 ## Reference
