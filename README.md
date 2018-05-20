@@ -72,7 +72,7 @@ model.json `Only contain model graph (Keras Format)`.
 
 weights.h5 `Only contain model weights (Keras Format)`.
 
-model.h5 `Both contain model graph and weights`.
+model.h5 `Both contain model graph and weights (Keras Format)`.
 
 
 ## Reference
