@@ -66,6 +66,12 @@ or you must install mnist from PyPi using `$pip3 install mnist` .
 $ python3 predict-mnist-ncs.py
 ```
 
+Do prediction on a random image using Keras
+
+```
+$ python3 ppredict-mnist-keras.py
+```
+
 ---
 
 model.json `Only contain model graph (Keras Format)`.
