@@ -4,7 +4,7 @@
 # In[1]:
 
 
-from keras import layers models
+from keras import layers, models
 from keras.models import load_model
 from keras.datasets import mnist
 from keras.utils import to_categorical
