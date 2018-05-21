@@ -83,5 +83,5 @@ model.h5 `Both contain model graph and weights (Keras Format)`.
 
 ## Reference
 
-+ [oraoto/learn_ml](https://github.com/oraoto/learn_ml/blob/master/ncs/README.md)
++ [oraoto/learn_ml](https://github.com/oraoto/learn_ml/blob/master/ncs)
 + [ardamavi/Intel-Movidius-NCS-Keras](https://github.com/ardamavi/Intel-Movidius-NCS-Keras)
