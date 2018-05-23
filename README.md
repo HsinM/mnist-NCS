@@ -14,6 +14,7 @@ Train a simple CNN for MNIST using jupyter
 train-mnist.ipynb
 ```
 
+
 Convert Keras model to Tensorflow model using script (model.json and weights.h5 file)
 
 ```
@@ -38,6 +39,7 @@ Convert Keras model to Tensorflow model using jupyter
 convert-mnist-only-h5.ipynb
 ```
 
+
 Compile MNIST model using mvNC Toolkit
 
 ```
@@ -58,6 +60,7 @@ If `tensorflow.python.framework.errors_impl.InvalidArgumentError`*: You must fee
 desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data}) 
 ```
 
+
 Do prediction on a random image using NCS
 if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 and edit line 6
 or you must install mnist from PyPi using `$pip3 install mnist` .
@@ -66,10 +69,24 @@ or you must install mnist from PyPi using `$pip3 install mnist` .
 $ python3 predict-mnist-ncs.py
 ```
 
+or run `predict-mnist-ncs.py` file directly:
+
+```
+$ chmod +x predict-mnist-ncs.py
+$ ./predict-mnist-ncs.py
+```
+
 Do prediction on a random image using Keras
 
 ```
 $ python3 ppredict-mnist-keras.py
+```
+
+or run `predict-mnist-keras.py` file directly:
+
+```
+$ chmod +x predict-mnist-keras.py
+$ ./predict-mnist-keras.py
 ```
 
 ---
