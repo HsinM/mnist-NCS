@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from mvnc import mvncapi as mvnc
 import mnist    # pip3 install mnist
 import numpy

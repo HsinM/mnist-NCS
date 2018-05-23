@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from keras import layers
 from keras import models
 from keras.models import load_model
