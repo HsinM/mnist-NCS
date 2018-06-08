@@ -45,7 +45,7 @@ except:
 with open("graph", mode='rb') as f:
     graphfile = f.read()
 
-graph = mvncapi.Graph(graph1)
+graph = fx.Graph(graph1)
 
 # Allocate the graph on the device and create input and output Fifos
 in_fifo, out_fifo = graph.allocate_with_fifos(dev, graphfile)
