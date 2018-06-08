@@ -51,7 +51,7 @@ graph = fx.Graph('graph1')
 in_fifo, out_fifo = graph.allocate_with_fifos(dev, graphfile)
 
 # Write the input to the input_fifo buffer and queue an inference in one call
-graph.queue_inference_with_fifo_elem(input_fifo, output_fifo, test_image, 'user object')
+graph.queue_inference_with_fifo_elem(in_fifo, out_fifo, test_image, 'user object')
 
 # Read the result to the output Fifo
 output, userobj = out_fifo.read_elem()
