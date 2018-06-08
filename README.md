@@ -66,6 +66,7 @@ If `tensorflow.python.framework.errors_impl.InvalidArgumentError`*: You must fee
 desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data}) 
 ```
 
+CAUTION:Graph file(blob) compiled by NCSDK 1.x not support NCSDK 2.x!!
 
 Do prediction on a random image using NCSDK 1.x
 if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 and edit line 6
