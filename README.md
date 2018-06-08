@@ -46,7 +46,7 @@ Compile MNIST model using mvNC Toolkit
 $ mvNCCompile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 ```
 
-If `ImportError: /usr/local/lib/python3.5/dist-packages/pygraphviz/_graphviz.cpython-35m-x86_64-linux-gnu.so: undefined symbol: Agundirected` when you using NCSDK v2.x: You should force reinstall your pygraphviz with direct path. Install command below:
+If `ImportError: /usr/local/lib/python3.5/dist-packages/pygraphviz/_graphviz.cpython-35m-x86_64-linux-gnu.so: undefined symbol: Agundirected` when you using `NCSDK v2.x`: You should force reinstall your pygraphviz with direct path. Install command below:
 
 ```
 $ sudo -H pip3 install --force-reinstall pygraphviz --install-option="--include-path=/usr/include/graphviz" --install-option="--library-path=/usr/lib/graphviz/"
@@ -67,7 +67,7 @@ desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data})
 ```
 
 
-Do prediction on a random image using NCS SDK 1.x
+Do prediction on a random image using NCSDK 1.x
 if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 and edit line 6
 or you must install mnist from PyPi using `$pip3 install mnist` .
 
@@ -82,7 +82,7 @@ $ chmod +x predict-mnist-ncs.py
 $ ./predict-mnist-ncs.py
 ```
 
-Do prediction on a random image using NCS SDK 2.x
+Do prediction on a random image using NCSDK 2.x
 
 ```
 $ python3 predict-mnist-ncs2.py
