@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+#https://movidius.github.io/ncsdk/ncapi/python_api_migration.html
+
 import mvnc.mvncapi as fx
 import mnist    # pip3 install mnist
 import numpy
@@ -39,22 +41,30 @@ except:
     print("Error - Could not open NCS device.")
     quit()
 
-
+# Read a compiled network graph from file (set the graph_filepath correctly for your graph file)
 with open("graph", mode='rb') as f:
     graphfile = f.read()
 
-graph = dev.AllocateGraph(graphfile)
+graph = mvncapi.Graph(graph1)
 
-graph.LoadTensor(test_image.astype('float16'), 'user object')
+# Allocate the graph on the device and create input and output Fifos
+in_fifo, out_fifo = graph.allocate_with_fifos(dev, graphfile)
 
-output, userobj = graph.GetResult()
+# Write the input to the input_fifo buffer and queue an inference in one call
+graph.queue_inference_with_fifo_elem(input_fifo, output_fifo, test_image, 'user object')
 
-graph.DeallocateGraph()
+# Read the result to the output Fifo
+output, userobj = out_fifo.read_elem()
 
+# Deallocate and destroy the fifo and graph handles, close the device, and destroy the device handle
 try:
+    in_fifo.destroy()
+    out_fifo.destroy()
+    graph.destroy()
     dev.close()
+    dev.destroy()
 except:
-    print("Error - could not close NCS device.")
+    print("Error - could not close/destroy Graph/NCS device.")
     quit()
 
 print("NCS", output, output.argmax())
