@@ -61,7 +61,7 @@ desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data})
 ```
 
 
-Do prediction on a random image using NCS
+Do prediction on a random image using NCS SDK 1.x
 if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 and edit line 6
 or you must install mnist from PyPi using `$pip3 install mnist` .
 
@@ -74,6 +74,12 @@ or run `predict-mnist-ncs.py` file directly:
 ```
 $ chmod +x predict-mnist-ncs.py
 $ ./predict-mnist-ncs.py
+```
+
+Do prediction on a random image using NCS SDK 2.x
+
+```
+$ python3 predict-mnist-ncs2.py
 ```
 
 Do prediction on a random image using Keras
