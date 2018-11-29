@@ -93,7 +93,7 @@ $ python3 predict-mnist-ncs2.py
 Do prediction on a random image using Keras
 
 ```
-$ python3 ppredict-mnist-keras.py
+$ python3 predict-mnist-keras.py
 ```
 
 or run `predict-mnist-keras.py` file directly:
