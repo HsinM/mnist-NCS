@@ -110,9 +110,7 @@ weights.h5 `Only contain model weights (Keras Format)`.
 
 model.h5 `Both contain model graph and weights (Keras Format)`.
 
-graph `Intel neural network graph file (v1)`.
-
-graph2 `Intel neural network graph file (v2)`.
+graph `Intel neural network graph file (v2)`.
 
 ## Reference
 
