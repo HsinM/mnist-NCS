@@ -68,7 +68,6 @@ desired_shape = node.inputs[1].eval(feed_dict={inputnode + ':0' : input_data})
 
 CAUTION:Graph file(blob) compiled by NCSDK 1.x not support NCSDK 2.x!!
 
-
 Do prediction on a random image using NCSDK 1.x
 if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 and edit line 6
 or you must install mnist from PyPi using `$pip3 install mnist` .
@@ -93,7 +92,7 @@ $ python3 predict-mnist-ncs2.py
 Do prediction on a random image using Keras
 
 ```
-$ python3 predict-mnist-keras.py
+$ python3 ppredict-mnist-keras.py
 ```
 
 or run `predict-mnist-keras.py` file directly:
@@ -111,6 +110,9 @@ weights.h5 `Only contain model weights (Keras Format)`.
 
 model.h5 `Both contain model graph and weights (Keras Format)`.
 
+graph `Intel neural network graph file (v1)`.
+
+graph2 `Intel neural network graph file (v2)`.
 
 ## Reference
 
