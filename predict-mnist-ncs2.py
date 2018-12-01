@@ -42,7 +42,7 @@ except:
     quit()
 
 # Read a compiled network graph from file (set the graph_filepath correctly for your graph file)
-with open("graph", mode='rb') as f:
+with open("graph2", mode='rb') as f:
     graphfile = f.read()
 
 graph = fx.Graph('graph1')
