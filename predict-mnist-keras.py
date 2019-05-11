@@ -25,7 +25,7 @@ test_image = test_image.astype('float32') / 255.0
 #model = models.model_from_json(config)
 #model.load_weights(weights_file)
 
-# 另一個方法
+# Another method
 model = load_model('model.h5')
 
 result = model.predict(test_image.reshape(1, 28, 28, 1))[0]
