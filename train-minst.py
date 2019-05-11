@@ -74,7 +74,7 @@ print(model.evaluate(x_test, y_test))
 
 
 # model 與 weights 分別儲存
-with open("model.json", "w") as file:
+with open("metadata.json", "w") as file:
     file.write(model.to_json())
 model.save_weights("weights.h5")
 

@@ -18,13 +18,13 @@ train-mnist.ipynb
 Convert Keras model to Tensorflow model using script (model.json and weights.h5 file)
 
 ```
-$ python3 convert-mnist.py
+$ python3 convert-mnist-json-h5.py
 ```
 
 Convert Keras model to Tensorflow model using jupyter
 
 ```
-convert-mnist.ipynb
+convert-mnist-json-h5.ipynb
 ```
 
 Convert Keras model to Tensorflow model using script (model.h5 file)
@@ -45,6 +45,8 @@ Compile MNIST model using mvNC Toolkit
 ```
 $ mvNCCompile TF_Model/tf_model.meta -in=conv2d_1_input -on=dense_2/Softmax
 ```
+
+Refer: https://movidius.github.io/ncsdk/tools/compile.html
 
 If `ImportError: /usr/local/lib/python3.5/dist-packages/pygraphviz/_graphviz.cpython-35m-x86_64-linux-gnu.so: undefined symbol: Agundirected` when you using `NCSDK v2.x`: You should force reinstall your pygraphviz with direct path. Install command below:
 
@@ -73,20 +75,20 @@ if you want use mnist.load_data() provided by TF, you should remark line 2,8~11 
 or you must install mnist from PyPi using `$pip3 install mnist` .
 
 ```
-$ python3 predict-mnist-ncs.py
-```
-
-or run `predict-mnist-ncs.py` file directly:
-
-```
-$ chmod +x predict-mnist-ncs.py
-$ ./predict-mnist-ncs.py
+$ python3 predict-mnist-ncsdk1.py
 ```
 
 Do prediction on a random image using NCSDK 2.x
 
 ```
-$ python3 predict-mnist-ncs2.py
+$ python3 predict-mnist-ncsdk2.py
+```
+
+or run `predict-mnist-ncsdk*.py` file directly:
+
+```
+$ chmod +x predict-mnist-ncsdk*.py
+$ ./predict-mnist-ncsdk*.py
 ```
 
 Do prediction on a random image using Keras
@@ -110,9 +112,9 @@ weights.h5 `Only contain model weights (Keras Format)`.
 
 model.h5 `Both contain model graph and weights (Keras Format)`.
 
-graph `Intel neural network graph file (v2)`.
+graph `Intel neural network graph file for ncsdk v2`.
 
-## Reference
+## References
 
 + [oraoto/learn_ml](https://github.com/oraoto/learn_ml/blob/master/ncs)
 + [ardamavi/Intel-Movidius-NCS-Keras](https://github.com/ardamavi/Intel-Movidius-NCS-Keras)
